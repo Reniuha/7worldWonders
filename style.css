@@ -1,117 +1,203 @@
 body{
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(1fr, 12);
-    grid-template-rows: repeat(1fr auto);
-    background-color:bisque;
+    height: 100vh;
+    background: #0b0d15;
+    overflow-x: hidden;
+}
+  
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
-#tittleDiv{
-    width: 100vw;
+#old-btn, #new-btn{
+    height: 10vh;
+    width: 10vw;
+    position: relative;
+    background-color: #1c1f2b;
+    color: white;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+  
+#old-btn::after, #old-btn::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 50%, red);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 10px;
+    animation: 3s spinBackwards linear infinite;
+}
+#old-btn::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spinBackwards{
+    from{
+      --angle: 360deg;
+    }
+    to{
+      --angle: 0deg;
+    }
+}
+  
+  #new-btn::after, #new-btn::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 50%, blue);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 10px;
+    animation: 3s spinBackwards linear infinite;
+  }
+  #new-btn::before{
+    filter: blur(1.5rem);
+  }
+
+#buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 #tittle{
-    width: 100vw;
-    height: 10vh;
-    font-size: 4.5rem;
+    margin-top: 125px;
+    width: 100%;
+    font-size: 3rem;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    grid-row: 2;
+    background-color: #1c1f2b;
+    border-radius: 300px;
+
+    p{
+        padding: 15px;
+        border:#12141b 5px solid;
+        border-radius: 300px;
+    }
 }
 
 #container{
-    background-color: pink;
-    height: auto;
-    position: relative;
-    width: 70%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    border: black 5px solid;
-    border-radius: 25px;
+
+    #old{
+        p{
+            color: white;
+            font-size: 2.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        border-top: #1c1f2b solid 5px;
+        border-bottom: #1c1f2b solid 5px; 
+
+    }
+
+    #new{
+        p{
+            color: white;
+            font-size: 2.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        border-top: #1c1f2b solid 5px;
+        border-bottom: #1c1f2b solid 5px; 
+    }
 }
 
 .card{
+    background-color: #06123f;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border: 5px solid #1c1f2b;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    .cardTittle{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5rem !important;
+        padding: 20px;
+    }
+
+    .content{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem !important;
+    }
+
+    #img{
+        height: 200px;
+        width: 200px;
+        position: relative;
+        left: 50%;
+        translate: -50%;
+    }
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 50px;
+    padding-bottom: 75px;
+}
+
+.hidden{
+    display: none;
+}
+
+#footer{
+    p{
+        padding: 20px;
+        color: white;
+        font-size: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100vw;
+        background-color: #17181e;
+        float: bottom;
+        text-align: center;
+    }
+}
+
+#nav{
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
     height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(auto, 1fr);
-    border-radius: 25px;
-
-    .topic{
-        width: 500px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .topic-1, .topic-3, .topic-5, .topic-7{
-        grid-column: 4 / 12;
-        text-align: center;
-    }
-
-    .topic-2, .topic-4, .topic-6{
-        grid-column: 5 / 12;
-        text-align: center;
-    }
-
-    .img{
-        width: 200px;
-        height: 200px;
-        grid-row: 1 / 12;
-    }
-
-    .img-1, .img-3, .img-5, .img-7{
-        grid-column: 1;
-    }
-
-    .img-2, .img-4, .img-6{
-        grid-column: 12;
-    }
-
-    #content-1, #content-3, #content-5, #content-7{
-        text-align: center;
-        margin-left: 30px;
-        grid-row: 2;
-        grid-column: 2 / 12;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.3rem;
-    }
-
-    #content-2, #content-4, #content-6{
-        text-align: center;
-        margin-right: 30px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.3rem;
-        grid-row: 2;
-        grid-column: 1 / 12;
-    }
+    background-color: #17181e;
+    z-index: 2;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
 }
 
-.card-1, .card-3, .card-5, .card-7{
-    padding: 20px;
-    border: black 2px solid;
-    border-radius: 25px;
-
-    margin: 10px;
-    grid-column: 1 / 12;
-    width: fit-content;
-}
-
-.card-2, .card-4, .card-6{
-    #img-2{
-        width: 200px;
-        height: 200px;
-        grid-row: 1 / 12;
-    }
-
-    #topic-2{
-        width: 500px;
-        grid-column: 5 / 12;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    padding: 20px;
-    border: black 2px solid;
-    margin: 10px;
-    grid-column: 1 / 12;
-    width: fit-content;
+.nav-btn{
+    height: fit-content;
+    width: 200px;
+    font-size: 1.5rem;
+    background-color: #353951;
+    border:none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    border:2px black solid;
 }

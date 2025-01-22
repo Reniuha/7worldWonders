@@ -3,48 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Wonders of the World</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="tittleDiv">
-        <p id="tittle">7 World Wonders</p>
-    </div>   
+    <div id="nav">
+        <button class="nav-btn">MORE</button>
+        <button class="nav-btn">ABOUT US</button>
+        <button class="nav-btn">FAQ</button>
+        <button class="nav-btn">SOCIALS</button>
+    </div>
+
+    <div id="tittle"><p>Wonders of the World</p></div>
+
+    <div id="buttons">
+        <p id="old-btn">OLD</p>
+        <p id="new-btn">NEW</p>
+    </div>
+
     <div id="container">
-        <div class="card card-1">
-            <img class="img img-1" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/7e/7d/2c/pyramids-of-giza.jpg?w=1200&h=1200&s=1" alt="">
-            <h1 class="topic topic-1">Great Pyramids of Giza</h1>
-            <p id="content-1">The Great Pyramid of Giza is the largest Egyptian pyramid. It served as the tomb of pharaoh Khufu, who ruled during the Fourth Dynasty of the Old Kingdom. Built in 2600 BC, over a period of about 26 years, the pyramid is the oldest of the Seven Wonders of the Ancient World, and the only wonder that has remained largely intact.</p>
+        <div id="old" class="hidden">
+            <p>OLD Wonders</p>     
+            <div class="cards">   
+                <div class="card">
+                    <p class="cardTittle">Great Pyramid of Giza</p>
+                    <img id="img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/7e/7d/2c/pyramids-of-giza.jpg?w=1200&h=1200&s=1" alt="">
+                    <p class="content">The only surviving wonder, the Great Pyramid was built as a tomb for Pharaoh Khufu, showcasing ancient Egyptian architectural precision and engineering over 4,500 years ago.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Hanging Gardens of Babylon</p>
+                    <img id="img" src="https://babilonosodai.lt/wp-content/uploads/2023/01/KBS.jpg" alt="">
+                    <p class="content">Legendary terraced gardens, possibly located in Babylon, were said to have been built by Nebuchadnezzar II for his wife, combining nature and advanced irrigation techniques in the desert.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Statue of Zeus at Olympia</p>
+                    <img id="img" src="https://imgcdn.stablediffusionweb.com/2024/9/13/fe72f477-26b5-4fdd-8428-539111915cee.jpg" alt="">
+                    <p class="content">A massive statue of Zeus, created by sculptor Phidias, stood in Olympia. It symbolized Greek religion and craftsmanship, representing Zeus as the king of the gods.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Temple of Artemis at Ephesus</p>
+                    <img id="img" src="https://aboutephesus.com/wp-content/uploads/elementor/thumbs/temple-of-artemis-1-qz4vdqeqme5df2fx0f39s9xey47b98n94ex7r0pgg8.jpg" alt="">
+                    <p class="content">This grand temple, dedicated to the goddess Artemis, was rebuilt around 550 BCE, famed for its vast size and exquisite sculptures, destroyed in 356 BCE by fire.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Mausoleum at Halicarnassus</p>
+                    <img id="img" src="https://cdn.britannica.com/58/168958-050-D06F8501/Mausoleum-Halicarnassus.jpg" alt="">
+                    <p class="content">A monumental tomb built for Mausolus, a Persian satrap, by his wife Artemisia, showcasing Greek, Egyptian, and Lycian architectural styles. It was destroyed by earthquakes.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Colossus of Rhodes </p>
+                    <img id="img" src="https://www.greekboston.com/wp-content/uploads/2017/04/Colossus-of-Rhodes.jpg" alt="">
+                    <p class="content">A giant bronze statue of the sun god Helios, erected to celebrate the defense of Rhodes, was one of the tallest statues in the ancient world before it collapsed.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Lighthouse of Alexandria</p>
+                    <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkhG50jvVDopIBf65cIrezNCdzf5kmN0DVlw&s" alt="">
+                    <p class="content">Located on the island of Pharos, this lighthouse guided sailors into the harbor of Alexandria with its massive light, one of the tallest structures of its time.</p>
+                </div>
+
+            </div>
         </div>
-        <div class="card card-2">
-            <h1 class="topic topic-2">Colossus of Rhodes</h1>
-            <p id="content-2">The Colossus of Rhodes was a statue of the Greek sun god Helios, erected in the city of Rhodes, on the Greek island of the same name, by Chares of Lindos in 280 BC. One of the Seven Wonders of the Ancient World, it was constructed to celebrate the successful defence of Rhodes city against an attack by Demetrius I of Macedon, who had besieged it for a year with a large army and navy.</p>
-            <img class="img img-2" src="https://greekcitytimes.com/wp-content/uploads/2021/07/Colossus-of-rhodes-599x600.jpg" alt="">
-        </div>
-        <div class="card card-3">
-            <img class="img img-3" src="https://res.cloudinary.com/jerrick/image/upload/c_scale,f_jpg,q_auto/64c02ad7193c4a001d7a6fec.png" alt="">
-            <h1 class="topic topic-3">Hanging Gardens of Babylons</h1>
-            <p id="content-3">The Hanging Gardens of Babylon were one of the Seven Wonders of the Ancient World listed by Hellenic culture. They were described as a remarkable feat of engineering with an ascending series of tiered gardens containing a wide variety of trees, shrubs, and vines, resembling a large green mountain constructed of mud bricks. It was said to have been built in the ancient city of Babylon, near present-day Hillah, Babil province, in Iraq.</p>
-        </div>
-        <div class="card card-4">
-            <h1 class="topic topic-4">Lighthouse of Alexandria</h1>
-            <p id="content-4">The Lighthouse of Alexandria, sometimes called the Pharos of Alexandria was a lighthouse built by the Ptolemaic Kingdom of Ancient Egypt, during the reign of Ptolemy II Philadelphus. It has been estimated to have been at least 100 metres in overall height. One of the Seven Wonders of the Ancient World, for many centuries it was one of the tallest man-made structures in the world.
-        </div>
-        <div class="card card-5">
-            <img class="img img-5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mausoleum_at_Halicarnassus_at_the_Bodrum_Museum_of_Underwater_Archaeology.jpg/250px-Mausoleum_at_Halicarnassus_at_the_Bodrum_Museum_of_Underwater_Archaeology.jpg" alt="">
-            <h1 class="topic topic-5">Mausoleum at Halicarnassus</h1>
-            <p id="content-5">The Mausoleum at Halicarnassus or Tomb of Mausolus was a tomb built between 353 and 351 BC in Halicarnassus for Mausolus, an Anatolian from Caria and a satrap in the Achaemenid Persian Empire, and his sister-wife Artemisia II of Caria. The structure was designed by the Greek architects Satyros and Pythius of Priene. Its elevated tomb structure is derived from the tombs of neighbouring Lycia, a territory Mausolus had invaded and annexed 360 BC, such as the Nereid Monument.</p>
-        </div>
-        <div class="card card-6">
-            <h1 class="topic topic-6">Statue of Zeus at Olympia</h1>
-            <p id="content-6">The Statue of Zeus at Olympia was a giant seated figure, about 12.4m tall, made by the Greek sculptor Phidias around 435 BC at the sanctuary of Olympia, Greece, and erected in the Temple of Zeus there. Zeus is the sky and thunder god in ancient Greek religion, who rules as king of the gods on Mount Olympus.</p>
-            <img class="img img-6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Le_Jupiter_Olympien_ou_l%27art_de_la_sculpture_antique.jpg/220px-Le_Jupiter_Olympien_ou_l%27art_de_la_sculpture_antique.jpg" alt="">
-        </div>
-        <div class="card card-7">
-            <img class="img img-7" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Miniaturk_009.jpg/220px-Miniaturk_009.jpg" alt="">
-            <h1 class="topic topic-7">Temple of Artemis</h1>
-            <p id="content-7">The Temple of Artemis or Artemision, also known as the Temple of Diana, was a Greek temple dedicated to an ancient, localised form of the goddess Artemis. It was located in Ephesus. By AD 401 it is believed it had been ruined or destroyed. Only foundations and fragments of the last temple remain at the site.</p>
+        <div id="new" class="hidden">
+            <p>NEW Wonders</p>
+
+            <div class="cards">   
+                <div class="card">
+                    <p class="cardTittle">Great Wall of China</p>
+                    <img id="img" src="https://images.nationalgeographic.org/image/upload/v1638892506/EducationHub/photos/the-great-wall-of-china.jpg" alt="">
+                    <p class="content">A series of fortifications built to protect ancient China from invasions, the Great Wall stretches over 13,000 miles, showcasing impressive ancient engineering and defense strategies.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Petra</p>
+                    <img id="img" src="https://api.seeplaces.com/Storage/Static/Images/c600e059-51ad-4a6a-acfa-602b770804dd.jpg?width=800&quality=85" alt="">
+                    <p class="content">An ancient city carved into red sandstone cliffs, Petra was the capital of the Nabatean Kingdom, famous for its intricate rock-cut architecture and water management systems.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Christ the Redeemer</p>
+                    <img id="img" src="https://www.riodejaneiro.com/media/uploads/riodejaneiro.com/2015/07/Christ%20the%20Redeemer.jpg" alt="">
+                    <p class="content">A towering statue of Jesus Christ in Rio de Janeiro, standing 98 feet tall, symbolizes Christianity and Brazil's cultural identity. It's a symbol of peace and unity.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Machu Picchu</p>
+                    <img id="img" src="https://www.peruforless.com/_next/image?url=https%3A%2F%2Fwww.peruforless.com%2Fimages%2Ftop-machu-picchu2-s.jpg&w=3840&q=75" alt="">
+                    <p class="content">An ancient Inca city high in the Andes Mountains, Machu Picchu is known for its stunning terracing, impressive stonework, and mysterious history, attracting travelers worldwide.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Chichen Itza</p>
+                    <img id="img" src="https://image-tc.galaxy.tf/wijpeg-2st4p53xmq8zhzwvckr7xkbp9/30-chichen-itza.jpg" alt="">
+                    <p class="content">A major Maya city known for its Pyramid of Kukulcán, Chichen Itza showcases advanced Maya knowledge of astronomy, mathematics, and architecture. It was a ceremonial center.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Roman Colosseum</p>
+                    <img id="img" src="https://www.thetrainline.com/cms/media/10910/italy-rome-collosseum.jpg?mode=crop&width=1080&height=1080&quality=70" alt="">
+                    <p class="content">An iconic symbol of ancient Rome, the Colosseum hosted gladiator battles and public spectacles. It stands as a monumental testament to Roman engineering and entertainment culture.</p>
+                </div>
+                <div class="card">
+                    <p class="cardTittle">Taj Mahal</p>
+                    <img id="img" src="https://whc.unesco.org/uploads/thumbs/site_0252_0008-750-750-20250108121530.jpg" alt="">
+                    <p class="content">A white marble mausoleum built by Emperor Shah Jahan in memory of his wife Mumtaz Mahal, the Taj Mahal is celebrated for its beauty and romantic symbolism.</p>
+                </div>
         </div>
     </div>
+
+    <div id="footer">
+        <p>Made by Naglis Runas</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
