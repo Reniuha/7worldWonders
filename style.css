@@ -3,6 +3,10 @@ body{
     background: #0b0d15;
     overflow-x: hidden;
 }
+
+*{
+    text-decoration-line: none;
+}
   
 @property --angle{
     syntax: "<angle>";
@@ -200,4 +204,20 @@ body{
     padding-bottom: 15px;
     border-radius: 15px;
     border:2px black solid;
+}
+
+.btn{
+    height: fit-content;
+    width: 200px;
+    font-size: 1.5rem;
+    background-color: #353951;
+    border:none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    border:2px black solid;
+    a{
+        text-decoration-line: none;
+        color: black;
+    }
 }
